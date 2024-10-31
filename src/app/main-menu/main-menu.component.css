@@ -1,0 +1,27 @@
+
+app-header {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    margin-top: -16px;
+}
+
+app-footermain {
+    position: fixed;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+
+/*/////////////////////////////////////*/
+
+button {
+    margin: 5px;
+}
+
+.clicked {
+    background-color: #00f;
+    color: #fff;
+}
+
+

@@ -1,0 +1,25 @@
+<div class="article_ed_layer__content article_editor article_theme" theme="dark">
+  <div class="article_editor_canvas article_edit article" contenteditable="true" style="left: 0px; min-height: 100vh;">
+    <h1 class="article_paragraph" data-placeholder="Write whatever you want">
+      <span class="placeholderes" id="titlePlaceholder">Title</span><br>
+    </h1>
+    <hr>
+    <p class="article_paragraph" data-placeholder="No one will judge you for your mistakes here">
+      <span class="placeholderes" id="contentPlaceholder">Content</span><br>
+      <span class="article_ed_paragraph_tools" contenteditable="false"><br></span>
+    </p>
+  </div>
+  <input type="file" (change)="onMediaChange($event)" multiple accept="image/*,video/*" />
+  <div class="article_photo_upload"></div>
+
+  <div class="url-input">
+    <label for="url">Enter URL:</label>
+    <input type="url" id="url" placeholder="https://example.com" (change)="addUrlToContent()" />
+  </div>
+
+
+  <input type="text" id="hashtag" (keyup)="onHashtagKeyup($event)" placeholder="أدخل هاشتاج" />
+
+
+  <button>Post</button>
+</div>

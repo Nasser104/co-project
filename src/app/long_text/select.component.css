@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.article_editor_canvas {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.media-item {
+  margin: 10px 0;
+}
+
+img {
+  width: 50%;
+  height: 100px;
+}
+
+video {
+  width: 50%;
+  height: 100px;
+}
+
+.placeholderes {
+  color: #fff; /* لون النص البديل */
+  position: absolute; /* لجعلها فوق النص القابل للتعديل */
+  pointer-events: none; /* لجعل النص غير قابل للتفاعل */
+  transition: opacity 0.3s; /* إضافة تأثير انتقال */
+  opacity: 1; /* الافتراضي */
+}
+
+.article_editor_canvas {
+  position: relative; /* لتكون النصوص البديلة في موضع مناسب */
+}
+
+.article_editor_canvas:focus-within .placeholderes {
+  opacity: 0; /* إخفاء النص البديل عند الكتابة */
+}
+

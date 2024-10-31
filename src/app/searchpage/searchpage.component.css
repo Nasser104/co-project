@@ -1,0 +1,15 @@
+
+app-header {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    margin-top: -40px;
+}
+
+.custom-input {
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 12px;
+}

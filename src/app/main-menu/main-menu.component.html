@@ -1,0 +1,206 @@
+
+<app-header></app-header>
+
+<div class="container-fluid d-flex flex justify-content-around">
+    <div class="row col-lg-6 col-md-10 col-12" style="margin-top: 80px;">
+        <div class="content">
+            <ng-container *ngIf="showMainMenu">
+                <div class="container-fluid" id="main">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-bodey">
+                                <div class="card m-1 bg-dark" (click)="goToProfile()">
+                                    <div class="card-body fs-4 text-light">
+                                        <img class="images rounded" src="assets/img/HD wallpaper_ girl wearing VR goggle, woman using VR glasses, virtual reality.jpeg" width="50" height="60"/>
+                                        <span> Ruba Nasser </span>
+                                    </div>
+                                </div>
+                                <div class="row m-2">
+                                    <ul class="nav justify-content-evenly">
+                                        <li class="nav-item" (click)="togglePrivate()">
+                                            <img src="assets/icons/drag_indicator_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                                        </li>
+                                        <li class="nav-item" (click)="toggleReader()">
+                                            <img src="assets/icons/qr_code (1).svg" alt="">
+                                        </li>
+                                        <li class="nav-item" (click)="toggleEidtProfile()">
+                                            <button type="button" class="btn btn-outline-primary">Eidt Profile</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div class="row m-3">
+                                    <ul class="nav justify-content-evenly">
+                                        <li class="nav-item" (click)="goToFriendships()">
+                                            <img src="assets/icons/friend.svg" alt="">
+                                        </li>
+                                        <li class="nav-item" (click)="goToMessages()">
+                                            <img src="assets/icons/message.svg" alt="">
+                                        </li>
+                                        <li class="nav-item" (click)="toggleInterests()">
+                                            <img src="assets/icons/beenhere_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark p-1" style="margin-top: 12px;" (click)="goToCommunity()">
+                        <div class="card-body fs-4 text-light text-center">
+                            <span>WikiedIn Community</span>
+                        </div>
+                    </div>
+                    <div class="container p-2">
+                        <nav class="navbar navbar-dark bg-dark">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">WikiedIn</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+                            <div class="p-4">
+                                <div class="row">
+                                    <div class="card m-1" (click)="goToWinwatch()">
+                                        <div class="card-body">
+                                            <span>WikiedIn Watch</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn Blog</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn News</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn Ask</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1" (click)="goToInstpin()">
+                                        <div class="card-body">
+                                            <span>WikiedIn Instpin</span>
+                                        </div>
+                                    </div>
+                                    <!----------
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn Career and Jobs</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn Player</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn kids</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn freelance</span>
+                                        </div>
+                                    </div>
+                                    <div class="card m-1">
+                                        <div class="card-body">
+                                            <span>WikiedIn Marketplace</span>
+                                        </div>
+                                    </div>
+                                    ------------>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="showEidtProfile">
+                <div class="container-fluid d-flex justify-content-between">
+                    <h2>Eidt Profile</h2>
+                    <a (click)="toggleMainMenu()">
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                </div>
+                <div class="input d-flex justify-content-between">
+                    <input type="name" placeholder="fullName">
+                    <input type="email" placeholder="@mail.com">
+                </div>
+                <!-------------------------------------->
+            </ng-container>
+            <ng-container *ngIf="showPrivate">
+                <div class="container-fluid d-flex justify-content-between">
+                    <h2>private</h2>
+                    <a (click)="toggleMainMenu()">
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="opitons">
+                        <div class="opiton m-3 d-flex justify-content-between">
+                            <h2>Messaging feature</h2>
+                            <input type="checkbox" [checked]="isChecked" (click)="toggleCheckbox">
+                        </div>
+                        <div class="opiton m-3 d-flex justify-content-between">
+                            <h2>Video Call featur</h2>
+                            <input type="checkbox" [checked]="isChecked" (click)="toggleCheckbox">
+                        </div>
+                        <div class="opiton m-3 d-flex justify-content-between">
+                            <h2>See Friends list feature</h2>
+                            <input type="checkbox" [checked]="isChecked" (click)="toggleCheckbox">
+                        </div>
+                        <div class="opiton m-3 d-flex justify-content-between">
+                            <h2>Privacy Protection feature</h2>
+                            <input type="checkbox" [checked]="isChecked" (click)="toggleCheckbox">
+                        </div>
+                        <div class="opiton m-3 d-flex justify-content-between">
+                            <h2>Communication accounts feature</h2>
+                            <input type="checkbox" [checked]="isChecked" (click)="toggleCheckbox">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDelfault">
+                            <label class="form-check-label" for="flexCheckDelfault">
+                                Saja Nasser
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDelfault">
+                            <label class="form-check-label" for="flexSwitchCheckDelfault">
+                                Saja Nasser
+                            </label>
+                        </div>
+                        <input type="checkbox" class="btn-check" id="btn-check-outlined">
+                        <label class="btn-check-outlined-primary" for="btn-check-outlined"> Saja Nasser</label>
+                    </div>
+                </div>
+                <hr>
+                <!-------------------------------------->
+            </ng-container>
+            <ng-container *ngIf="showInterests">
+                <app-interests></app-interests>                                                                                                                                                                                
+            </ng-container>
+            <ng-container *ngIf="showReader">
+                <div class="container-fluid d-flex justify-content-between">
+                    <h2>QR Reader</h2>
+                    <a (click)="toggleMainMenu()">
+                        <i class="material-icons">arrow_forward</i>
+                    </a>
+                </div>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+                <!-------------------------------------->
+            </ng-container>
+        </div>
+    </div>
+    <div class="row col-lg-4" style="margin-top: 70px">
+        <app-search></app-search>
+    </div>
+</div>
+
+<app-footermain></app-footermain>

@@ -1,0 +1,72 @@
+
+<nav>
+    <app-header></app-header>
+</nav>
+
+    <div class="side-menu m-4">
+        <form class="d-flex col-12" role="search">
+            <input class="custom-input text-light fs-4" (ngModel)="inputValue" placeholder="Search suggestions">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul class="nav d-flex justify-content-around">
+            <li class="nav-item">
+                <a (click)="toggleAll()">All</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="togglePosts()">Posts</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="togglePages()">Pages</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="toggleImages()">images</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="toggleVideos()">Videos</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="toggleBlog()">blog</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="content">
+        <ng-container *ngIf="showAll">
+            <h2>All</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showPosts">
+            <h2>Posts</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showPages">
+            <h2>Pages</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showImages">
+            <h2>Images</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showVideos">
+            <h2>Videos</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showBlog">
+            <h2>Blog</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+            <!-------------------------------------->
+        </ng-container>
+
+
+

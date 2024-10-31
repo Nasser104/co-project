@@ -1,0 +1,9 @@
+@media only screen and (max-width: 992px) {
+    #search {
+        display: none; 
+    }
+}
+
+.hashtag {
+    margin-top: 20px;
+}

@@ -1,0 +1,48 @@
+
+<app-header></app-header>
+
+<div class="container-fluid d-flex justify-content-center">
+    <div class="row" style="margin-top: 90px;">
+        <div class="container-fluid col-lg-8 col-md-10">
+            <div class="side-menu">
+                <ul class="nav d-flex justify-content-around">
+                    <li class="nav-item">
+                        <a (click)="togglePublic()">Public</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="toggleFriends()">Friends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="toggleApp()">WikiedIn App</a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="content">
+                <ng-container *ngIf="showPublic">
+                    <h2>public</h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+                    <!-------------------------------------->
+                </ng-container>
+                <ng-container *ngIf="showFriends">
+                    <h2>friends</h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+                    <!-------------------------------------->
+                </ng-container>
+                <ng-container *ngIf="showApp">
+                    <h2>WikiedIn App</h2>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+                    <!-------------------------------------->
+                </ng-container>
+            </div>
+        </div>
+        <div class="row col-lg-4">
+            <app-search></app-search>
+        </div>
+    </div>
+</div>
+
+<app-footermain></app-footermain>

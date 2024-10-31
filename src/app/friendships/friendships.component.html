@@ -1,0 +1,98 @@
+
+<app-header></app-header>
+
+  <div class="container-fluid d-flex justify-content-between">
+    <div class="container-fluid col-lg-10 col-md-10 col-12" id="main">
+      <div class="side-menu m-4">
+        <ul class="nav d-flex justify-content-around">
+            <li class="nav-item">
+                <a (click)="toggleSuggestions()">Suggestions</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="toggleFriends()">Friends</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="toggleInvitations()">Invitations</a>
+            </li>
+            <li class="nav-item">
+                <a (click)="toggleRequests()">Requests</a>
+            </li>
+            <form class="d-flex col-lg-4 col-md-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search for friends" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </ul>
+      </div>
+      <hr>
+      <div class="content">
+        <ng-container *ngIf="showSuggestions">
+          
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showFriends">
+            <h2>Friends</h2>
+            <hr>
+            <div>
+              <h2>Friends List</h2>
+              <ul>
+                <li *ngFor="let friend of friendList">
+                  {{ friend.name }}
+                </li>
+              </ul>
+            </div> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showInvitations">
+            <h2>Invitations</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+            <!-------------------------------------->
+        </ng-container>
+        <ng-container *ngIf="showRequests">
+            <h2>Requests</h2>
+            <hr>
+            <div>
+              <h2>Requests List</h2>
+              <ul>
+                <li *ngFor="let request of requestList">
+                  {{ request.name }}
+                  <button (click)="acceptFriendRequest(request)">
+                    Accept
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="container">
+              <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
+              <p><span >Rebecca Flex.</span> CEO at Company.</p>
+              <p>No one is better than John Doe.</p>
+            </div>
+            <div class="container">
+              <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
+              <p><span >Rebecca Flex.</span> CEO at Company.</p>
+              <p>No one is better than John Doe.</p>
+            </div>
+            <div class="container">
+              <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
+              <p><span >Rebecca Flex.</span> CEO at Company.</p>
+              <p>No one is better than John Doe.</p>
+            </div>
+            <div class="container">
+              <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
+              <p><span >Rebecca Flex.</span> CEO at Company.</p>
+              <p>No one is better than John Doe.</p>
+            </div>
+            <div class="container">
+              <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
+              <p><span >Rebecca Flex.</span> CEO at Company.</p>
+              <p>No one is better than John Doe.</p>
+            </div>
+            <!-------------------------------------->
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+<app-footermain></app-footermain>

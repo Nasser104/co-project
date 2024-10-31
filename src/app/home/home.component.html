@@ -1,0 +1,64 @@
+<app-header></app-header>    
+
+    <div class="container-fluid col-lg-12 d-flex flex justify-content-evenly" style="margin-left: -200px;">
+        <div class="row col-lg-4" style="margin-top: 20px;">
+            <app-sidemenu></app-sidemenu>
+        </div>
+        <div class="row col-lg-6 col-md-10 border border-bottom-0" style="margin-top: 60px;">
+            <div class="container-fluid">
+                <div class="side-menu" id="noor">
+                    <ul class="nav d-flex justify-content-evenly">
+                        <li class="nav-item" routerLinkActive="active" (click)="toggleForYou()" routerLink="/toggleForyou">
+                            <a >For You</a>
+                        </li>
+                        <li class="nav-item" routerLinkActive="active" (click)="toggleFollow()" routerLink="/toggleFollow">
+                            <a>Follow</a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="content">
+                    <ng-container *ngIf="showForYou">
+                        <p class="text-center">Lorem ipsum dolor sit amet, <q>consectetur adipisicing elit. Architecto,</q> <mark>neque ut repellat illum sequi voluptates. Vitae,</mark> facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+                        <!--------------------------------------> 
+                    </ng-container>
+                    <ng-container *ngIf="showFollow">
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+                        <!-------------------------------------->
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<app-footermain></app-footermain>
+
+
+
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+
+    

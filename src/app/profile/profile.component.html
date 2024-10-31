@@ -1,0 +1,135 @@
+
+<app-header></app-header>
+
+<div class="container-fluid d-flex flex justify-content-around" id="pro">
+    <div class="row col-lg-12 col-md-12 col-12 d-flex justify-content-center">
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="card bg-dark">
+          <img src="assets/img/HD wallpaper_ girl wearing VR goggle, woman using VR glasses, virtual reality.jpeg" class="card-img-top" alt="..." width="320" height="80">
+          <div>
+            <img src="assets/img/HD wallpaper_ girl wearing VR goggle, woman using VR glasses, virtual reality.jpeg" class="rounded float-end" style="margin-top: -40px; margin-right: 10px;" alt="..." width="120" height="90">
+          </div>
+          <div class="card-body text-light" style="margin-top: -50px;">
+            <h2 class="card-title"> {{Name}} </h2>
+            <p class="card-text mt-3">Headline</p>
+          </div>
+        </div>
+        <div class="row w-100 col-lg-4 col-md-5">
+          <div class="card mt-2" style="margin-left: 12px;">
+            <div class="card-header">
+              Featured {{Name}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Followers : {{Followers}} </li>
+              <li class="list-group-item">Tweets : {{Tweets}} </li>
+              <li class="list-group-item">Interaction : {{Interaction}} </li>
+              <li class="list-group-item">Monthly Views : {{MonthlyViews}} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!----------------------------------->
+      <div class="col-lg-6 col-md-7">
+        <div class="card text-center m-2">
+          <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Video</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Content</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card">
+              <div class="card-body">
+                This is some text within a card body.
+                <img src="assets/img/HD wallpaper_ girl wearing VR goggle, woman using VR glasses, virtual reality.jpeg" class="rounded float-end" style="margin-top: -40px; margin-right: 10px;" alt="..." width="120" height="90">
+              </div>
+            </div>
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-body-secondary">
+            All
+          </div>
+        </div>
+        <div class="border border-bottom-0">
+          <div class="side-menu m-4">
+            <ul class="nav d-flex justify-content-around">
+                <li class="nav-item" (click)="togglePost()">
+                    <a>All Your Content</a>
+                </li>
+                <li class="nav-item" (click)="toggleShare()">
+                    <a>Public Share</a>
+                </li>
+            </ul>
+            <hr>
+          </div>
+        </div>
+        <div class="content">
+          <ng-container *ngIf="showPost">
+            <h2>Post</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
+            <!-------------------------------------->
+          </ng-container>
+          <ng-container *ngIf="showShare">
+            <h2>Share</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
+            <!-------------------------------------->
+          </ng-container>
+          <ng-container *ngIf="showTag">
+            <h2>HashTag</h2>
+            <hr>
+            <div class="container-fluid">
+                <div class="row" style="margin: 8px;">
+                  <div class="hashtag">
+                    #world
+                    <p>100,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #Ukraine War
+                    <p>120,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #el-sisi
+                    <p>80,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #Sudan
+                    <p>60,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #world
+                    <p>100,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #Ukraine War
+                    <p>120,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #el-sisi
+                    <p>80,000 posts</p>
+                  </div>
+                  <div class="hashtag">
+                    #Sudan
+                    <p>60,000 posts</p>
+                  </div>
+                </div>
+            </div>
+            <!-------------------------------------->
+          </ng-container>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+

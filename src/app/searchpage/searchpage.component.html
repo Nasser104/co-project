@@ -1,4 +1,55 @@
 
+// new code 
+// في الشاشات الكبيرة تكون القئمة الجانبية , وفي الشاشات الاخري تكون في شركة شريط اسفل input search 
+
+<div>
+  <h1>اختر ما تريد عرضه:</h1>
+  
+  <button (click)="toggleDisplay('showAll')">All</button>
+  <button (click)="toggleDisplay('showRecent')">Recently</button>
+  <button (click)="toggleDisplay('showPosts')">All Content</button>
+  <button (click)="toggleDisplay('showPhotos')">عرض الصور</button>
+  <button (click)="toggleDisplay('showVideos')">عرض الفيديوهات</button>
+  <button (click)="toggleDisplay('showProfiles')">عرض الملفات الشخصية</button>
+  <button (click)="toggleDisplay('showPages')">عرض الصفحات</button>
+  <button (click)="toggleDisplay('showCompanies')">عرض الشركات</button>
+  <button (click)="toggleDisplay('showNews')">عرض الأخبار</button>
+  <button (click)="toggleDisplay('showPANDL')">عرض P&L</button>
+</div>
+
+<div *ngIf="displayState.showAll">
+  <p>All</p>
+</div>
+<div *ngIf="displayState.showRecent">
+  <p>Recently</p>
+</div>
+<div *ngIf="displayState.showPosts">
+  <p>All Content</p>
+</div>
+<div *ngIf="displayState.showPhotos">
+  <p>محتوى الصور هنا.</p>
+</div>
+<div *ngIf="displayState.showVideos">
+  <p>محتوى الفيديوهات هنا.</p>
+</div>
+<div *ngIf="displayState.showProfiles">
+  <p>محتوى الملفات الشخصية هنا.</p>
+</div>
+<div *ngIf="displayState.showPages">
+  <p>محتوى الصفحات هنا.</p>
+</div>
+<div *ngIf="displayState.showCompanies">
+  <p>محتوى الشركات هنا.</p>
+</div>
+<div *ngIf="displayState.showNews">
+  <p>محتوى الأخبار هنا.</p>
+</div>
+<div *ngIf="displayState.showPANDL">
+  <p>Places and Locations</p>
+</div>
+
+// الكود القديم لا يستخدم 
+
 <nav>
     <app-header></app-header>
 </nav>

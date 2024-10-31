@@ -1,0 +1,88 @@
+
+<div class="registration">
+  <div class="form-container">
+    <h3>Feed Cloud</h3>
+
+    <hr>
+
+    <form [formGroup]="accForm">
+      <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label placeholder-glow">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control-plaintext" id="staticEmail" value="" placeholder="email@example.com">
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="staticPassword" class="col-sm-2 col-form-label placeholder-glow">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control-plaintext" id="staticPassword" value="" placeholder="********" aria-describedby="passwordHelpBlock">
+        </div>
+        <div id="passwordHelpBlock" class="form-text" style="color: #fff;">
+          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="line">Choose account type</div>
+
+      <div class="category">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Default option
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+          <label class="form-check-label" for="exampleRadios2">
+            Default option
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
+          <label class="form-check-label" for="exampleRadios3">
+            Default option
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+          <label class="form-check-label" for="exampleRadios4">
+            Default option
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked>
+          <label class="form-check-label" for="exampleRadios5">
+            Default option
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6" checked>
+          <label class="form-check-label" for="exampleRadios6">
+            Default option
+          </label>
+        </div>
+      </div>
+
+      <hr>
+
+      <p>Default: Default option Message</p>
+      <P>Default: Default option Message</P>
+
+      <hr>
+
+      <div class="setting">
+        <button class="btn register-btn" style="color: rgb(59, 147, 199);" type="submit">Submit</button>
+        <button class="btn login-btn" style="color: rgb(59, 147, 199);" type="button">Login</button>
+      </div>
+
+    </form>
+  </div>
+</div>

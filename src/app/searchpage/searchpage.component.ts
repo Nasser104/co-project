@@ -1,5 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+// new code 
+
+interface DisplayState {
+  showAll: boolean;
+  showPosts: boolean;
+  showProfiles: boolean;
+  showPages: boolean;
+  showCompanies: boolean;
+  showNews: boolean;
+  showPANDL: boolean;
+  showImages: boolean;
+  showVideos: boolean;
+}
+
 interface FeedItem {
   title: string;
   contentSnippet: string;

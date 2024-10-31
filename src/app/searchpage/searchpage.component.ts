@@ -4,14 +4,15 @@ import { Component, OnInit } from '@angular/core';
 
 interface DisplayState {
   showAll: boolean;
+  showRecent: boolean;
   showPosts: boolean;
+  showPhotos: boolean;
+  showVideos: boolean;
   showProfiles: boolean;
   showPages: boolean;
   showCompanies: boolean;
   showNews: boolean;
   showPANDL: boolean;
-  showImages: boolean;
-  showVideos: boolean;
 }
 
 interface FeedItem {
@@ -26,7 +27,36 @@ interface FeedItem {
   templateUrl: './searchpage.component.html',
   styleUrls: ['./searchpage.component.css']
 })
-export class SearchpageComponent{
+export class SearchpageComponent {
+
+  // new code 
+
+  // تهيئة الحالة الافتراضية
+  displayState: DisplayState = {
+    showAll: true,
+    showRecent: true,
+    showPosts: false,
+    showPhotos: false,
+    showVideos: false,
+    showProfiles: false,
+    showPages: false,
+    showCompanies: false,
+    showNews: false,
+    showPANDL: false,
+  };
+
+  // دالة لتغيير الحالة
+  toggleDisplay(key: keyof DisplayState) {
+    // تعيين جميع القيم إلى false
+    Object.keys(this.displayState).forEach((k) => {
+      this.displayState[k as keyof DisplayState] = false;
+    });
+    
+    // تعيين القيمة المطلوبة إلى true
+    this.displayState[key] = true;
+  }
+
+  // الكود القديم
 
   inputValue: string = '';
 

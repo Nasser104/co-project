@@ -1,4 +1,50 @@
 
+// new code 
+
+<div>
+        <h1>اختر ما تريد عرضه:</h1>
+
+        <button (click)="toggleDisplay('showAll')">عرض الكل</button>
+        <button (click)="toggleDisplay('showPosts')">عرض المنشورات</button>
+        <button (click)="toggleDisplay('showProfiles')">عرض الملفات الشخصية</button>
+        <button (click)="toggleDisplay('showPages')">عرض الصفحات</button>
+        <button (click)="toggleDisplay('showCompanies')">عرض الشركات</button>
+        <button (click)="toggleDisplay('showNews')">عرض الأخبار</button>
+        <button (click)="toggleDisplay('showPANDL')">عرض P&L</button>
+        <button (click)="toggleDisplay('showImages')">عرض الصور</button>
+        <button (click)="toggleDisplay('showVideos')">عرض الفيديوهات</button>
+      </div>
+
+      <div *ngIf="displayState.showAll">
+        <p>محتوى الكل هنا.</p>
+      </div>
+      <div *ngIf="displayState.showPosts">
+        <p>محتوى المنشورات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showProfiles">
+        <p>محتوى الملفات الشخصية هنا.</p>
+      </div>
+      <div *ngIf="displayState.showPages">
+        <p>محتوى الصفحات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showCompanies">
+        <p>محتوى الشركات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showNews">
+        <p>محتوى الأخبار هنا.</p>
+      </div>
+      <div *ngIf="displayState.showPANDL">
+        <p>محتوى P&L هنا.</p>
+      </div>
+      <div *ngIf="displayState.showImages">
+        <p>محتوى الصور هنا.</p>
+      </div>
+      <div *ngIf="displayState.showVideos">
+        <p>محتوى الفيديوهات هنا.</p>
+      </div>
+
+// old code 
+
 <app-header></app-header>
 
 <div class="container-fluid d-flex justify-content-center">

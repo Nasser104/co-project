@@ -1,6 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
-import { Router, RouterModule, Routes } from '@angular/router'; 
-import { MatIconModule } from '@angular/material/icon';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-sidemenu',
@@ -12,33 +11,15 @@ export class SidemenuComponent {
 
   constructor(private router: Router) {}
 
-goToHome () {
-  this.router.navigate(["/home"])
-}
+isModalOpen: boolean = false;
 
-goToMainMenu () {
-  this.router.navigate(["/main-menu"])
-}
+  openModal() {
+    this.isModalOpen = true;
+  }
 
-goToAlerts () {
-  this.router.navigate(["/alerts"])
-}
-
-goToInterests () {
-  this.router.navigate(["/interests"])
-}
-
-goToFriendships () {
-  this.router.navigate(["/friendships"])
-}
-
-goToMessages () {
-  this.router.navigate(["/messages"])
-}
-
-goToWinwatch () {
-  this.router.navigate(["/winwatch"])
-}
+  closeModal() {
+    this.isModalOpen = false;
+  }
 
 //////////////////////////////////////////////////////
 

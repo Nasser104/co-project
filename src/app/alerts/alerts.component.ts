@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+// new code 
+
 interface DisplayState {
   showAll: boolean;
   showPosts: boolean;

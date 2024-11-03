@@ -6,11 +6,11 @@ body {
 
 .sidebar {
   width: 15%;
-  background-color: black;
+  background-color: #333;
   color: #fff;
   height: 100%;
   position: fixed;
-  top: 58px;
+  top: 0px;
   left: 80px;
   overflow-y: auto;
 }

@@ -1,15 +1,41 @@
 
-app-header {
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    margin-top: -40px;
+body {
+  display: flex;
+  position: fixed;
 }
 
-.custom-input {
-    background-color: black;
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-    padding: 12px;
+.sidebar {
+  width: 15%;
+  background-color: #333;
+  color: #fff;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 80px;
+  overflow-y: auto;
 }
+
+.nav {
+  list-style: none;
+  padding: 10px;
+}
+
+.nav-item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.3s ease;
+}
+
+.nav-link:hover {
+  border-left-color: #f00; /* Highlight on hover */
+}
+

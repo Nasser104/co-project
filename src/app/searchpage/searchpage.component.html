@@ -1,123 +1,78 @@
 
-// new code 
-// في الشاشات الكبيرة تكون القئمة الجانبية , وفي الشاشات الاخري تكون في شركة شريط اسفل input search 
-
-<div>
-  <h1>اختر ما تريد عرضه:</h1>
-  
-  <button (click)="toggleDisplay('showAll')">All</button>
-  <button (click)="toggleDisplay('showRecent')">Recently</button>
-  <button (click)="toggleDisplay('showPosts')">All Content</button>
-  <button (click)="toggleDisplay('showPhotos')">عرض الصور</button>
-  <button (click)="toggleDisplay('showVideos')">عرض الفيديوهات</button>
-  <button (click)="toggleDisplay('showProfiles')">عرض الملفات الشخصية</button>
-  <button (click)="toggleDisplay('showPages')">عرض الصفحات</button>
-  <button (click)="toggleDisplay('showCompanies')">عرض الشركات</button>
-  <button (click)="toggleDisplay('showNews')">عرض الأخبار</button>
-  <button (click)="toggleDisplay('showPANDL')">عرض P&L</button>
-</div>
-
-<div *ngIf="displayState.showAll">
-  <p>All</p>
-</div>
-<div *ngIf="displayState.showRecent">
-  <p>Recently</p>
-</div>
-<div *ngIf="displayState.showPosts">
-  <p>All Content</p>
-</div>
-<div *ngIf="displayState.showPhotos">
-  <p>محتوى الصور هنا.</p>
-</div>
-<div *ngIf="displayState.showVideos">
-  <p>محتوى الفيديوهات هنا.</p>
-</div>
-<div *ngIf="displayState.showProfiles">
-  <p>محتوى الملفات الشخصية هنا.</p>
-</div>
-<div *ngIf="displayState.showPages">
-  <p>محتوى الصفحات هنا.</p>
-</div>
-<div *ngIf="displayState.showCompanies">
-  <p>محتوى الشركات هنا.</p>
-</div>
-<div *ngIf="displayState.showNews">
-  <p>محتوى الأخبار هنا.</p>
-</div>
-<div *ngIf="displayState.showPANDL">
-  <p>Places and Locations</p>
-</div>
-
-// الكود القديم لا يستخدم 
-
-<nav>
-    <app-header></app-header>
-</nav>
-
-    <div class="side-menu m-4">
-        <form class="d-flex col-12" role="search">
-            <input class="custom-input text-light fs-4" (ngModel)="inputValue" placeholder="Search suggestions">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <ul class="nav d-flex justify-content-around">
-            <li class="nav-item">
-                <a (click)="toggleAll()">All</a>
-            </li>
-            <li class="nav-item">
-                <a (click)="togglePosts()">Posts</a>
-            </li>
-            <li class="nav-item">
-                <a (click)="togglePages()">Pages</a>
-            </li>
-            <li class="nav-item">
-                <a (click)="toggleImages()">images</a>
-            </li>
-            <li class="nav-item">
-                <a (click)="toggleVideos()">Videos</a>
-            </li>
-            <li class="nav-item">
-                <a (click)="toggleBlog()">blog</a>
-            </li>
-        </ul>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="sidebar">
+        <div class="nav">
+          <li class="nav-item" (click)="toggleDisplay('showAll')">
+            <a href="" class="nav-link">All</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showRecent')">
+            <a href="" class="nav-link">Recently</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showPosts')">
+            <a href="" class="nav-link">Posts</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showPhoto')">
+            <a href="" class="nav-link">Photos</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showVideo')">
+            <a href="" class="nav-link">Videos</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showNews')">
+            <a href="" class="nav-link">News</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showPages')">
+            <a href="" class="nav-link">Pages</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showProfiles')">
+            <a href="" class="nav-link">Profiles</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showComps')">
+            <a href="" class="nav-link">Compaines</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showBCC')">
+            <a href="" class="nav-link">Blogger, Content Creator</a>
+          </li>
+          <li class="nav-item" (click)="toggleDisplay('showPANDL')">
+            <a href="" class="nav-link">Places and Locations</a>
+          </li>
+        </div>
+      </div>
     </div>
-    <hr>
-    <div class="content">
-        <ng-container *ngIf="showAll">
-            <h2>All</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
-            <!-------------------------------------->
-        </ng-container>
-        <ng-container *ngIf="showPosts">
-            <h2>Posts</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
-            <!-------------------------------------->
-        </ng-container>
-        <ng-container *ngIf="showPages">
-            <h2>Pages</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
-            <!-------------------------------------->
-        </ng-container>
-        <ng-container *ngIf="showImages">
-            <h2>Images</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
-            <!-------------------------------------->
-        </ng-container>
-        <ng-container *ngIf="showVideos">
-            <h2>Videos</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, neque ut repellat illum sequi voluptates. Vitae, facere. A impedit id facere aliquam aspernatur. Temporibus nostrum labore dolorem sed repudiandae alias.</p>
-            <!-------------------------------------->
-        </ng-container>
-        <ng-container *ngIf="showBlog">
-            <h2>Blog</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae facilis, quaerat aliquid dolore vel asperiores laborum, optio nobis inventore libero ea quae, iusto sed? Inventore quod quibusdam minus et quaerat!</p>
-            <!-------------------------------------->
-        </ng-container>
-
-
+    <div class="col-lg-6">
+      <div *ngIf="displayState.showAll">
+        <p>محتوى الكل هنا.</p>
+      </div>
+      <div *ngIf="displayState.showPosts">
+        <p>محتوى المنشورات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showPhoto">
+        <p>محتوى الصور هنا.</p>
+      </div>
+      <div *ngIf="displayState.showVideo">
+        <p>محتوى الفيديوهات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showNews">
+        <p>محتوى الاخبار هنا.</p>
+      </div>
+      <div *ngIf="displayState.showPages">
+        <p>محتوى الصفحات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showProfiles">
+        <p>محتوى الملفات الشخصية هنا.</p>
+      </div>
+      <div *ngIf="displayState.showComps">
+        <p>محتوى الشركات هنا.</p>
+      </div>
+      <div *ngIf="displayState.showBCC">
+        <p>Blogger, Content Creator</p>
+      </div>
+      <div *ngIf="displayState.showPANDL">
+        <p>Places and Locations</p>
+      </div>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+</div>
 

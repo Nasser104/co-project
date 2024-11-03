@@ -1,46 +1,50 @@
 
 <div class="container text-center">
   <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-2">
       <div class="sidebar">
         <div class="nav">
           <li class="nav-item" (click)="toggleDisplay('showAll')">
-            <a href="" class="nav-link">All</a>
+            <a href="#" class="nav-link">Feed</a>
+          </li>
+          <hr>
+          <li class="nav-item" (click)="toggleDisplay('showAll')">
+            <a href="#" class="nav-link">All</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showRecent')">
-            <a href="" class="nav-link">Recently</a>
+            <a class="nav-link">Recently</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showPosts')">
-            <a href="" class="nav-link">Posts</a>
+            <a class="nav-link">Posts</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showPhoto')">
-            <a href="" class="nav-link">Photos</a>
+            <a class="nav-link">Photos</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showVideo')">
-            <a href="" class="nav-link">Videos</a>
+            <a class="nav-link">Videos</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showNews')">
-            <a href="" class="nav-link">News</a>
+            <a class="nav-link">News</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showPages')">
-            <a href="" class="nav-link">Pages</a>
+            <a class="nav-link">Pages</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showProfiles')">
             <a href="" class="nav-link">Profiles</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showComps')">
-            <a href="" class="nav-link">Compaines</a>
+            <a class="nav-link">Compaines</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showBCC')">
-            <a href="" class="nav-link">Blogger, Content Creator</a>
+            <a class="nav-link">BCC</a>
           </li>
           <li class="nav-item" (click)="toggleDisplay('showPANDL')">
-            <a href="" class="nav-link">Places and Locations</a>
+            <a class="nav-link">PANDL</a>
           </li>
         </div>
       </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 border border-bottom-0">
       <div *ngIf="displayState.showAll">
         <p>محتوى الكل هنا.</p>
       </div>
@@ -72,7 +76,13 @@
         <p>Places and Locations</p>
       </div>
     </div>
-    <div class="col-lg-3"></div>
+    <div class="col-lg-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste dicta, officiis placeat assumenda distinctio beatae excepturi in odio perferendis officia! Maxime repudiandae provident exercitationem assumenda nulla nesciunt commodi rerum?
+      </p>
+      <hr>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab esse eum delectus aperiam mollitia similique modi, provident culpa porro excepturi pariatur enim. Numquam, placeat itaque! Atque, minus! Odio, autem unde.
+    </div>
   </div>
 </div>
 

@@ -1,10 +1,13 @@
 
 <aside class="sidebar">
   <ul class="nav">
-    <button type="button" class="btn btn-outline-secondary d-grid gap-2 col-6 mx-auto" (click)="openModal()">Create</button>
-    <li class="nav-item" (click)="openModal()">
-      <a class="nav-link">Create</a>
-    </li>
+    <nav class="navbar m-2">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary" href="#">Feed Cloud</a>
+      </div>
+    </nav>
+    <hr>
+    <button type="button" class="btn btn-outline-secondary m-2 d-grid gap-2 col-6 mx-auto" (click)="openModal()">Create</button>
     <hr>
     <li class="nav-item" [routerLink]="['/feed']" routerLinkActive="active">
       <a href="" class="nav-link">Feed</a>
@@ -12,11 +15,11 @@
     <li class="nav-item" [routerLink]="['/follow']" routerLinkActive="active">
       <a href="" class="nav-link">Follow</a>
     </li>
-    <li class="nav-item" [routerLink]="['/stories']" routerLinkActive="active">
-      <a href="" class="nav-link">Stories</a>
-    </li>
     <li class="nav-item" [routerLink]="['/news']" routerLinkActive="active">
       <a href="" class="nav-link">News</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/stories']" routerLinkActive="active">
+      <a href="" class="nav-link">Stories</a>
     </li>
     <hr>
     <li class="nav-item" [routerLink]="['/search']" routerLinkActive="active">
@@ -25,8 +28,12 @@
     <li class="nav-item" [routerLink]="['/notify']" routerLinkActive="active">
       <a href="" class="nav-link">Notifications</a>
     </li>
+    <hr>
     <li class="nav-item" [routerLink]="['/board']" routerLinkActive="active">
       <a href="" class="nav-link">Dashboard</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/panel']" routerLinkActive="active">
+      <a href="" class="nav-link">Panel</a>
     </li>
   </ul>
 </aside>

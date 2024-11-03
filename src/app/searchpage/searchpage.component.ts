@@ -6,12 +6,12 @@ interface DisplayState {
   showAll: boolean;
   showRecent: boolean;
   showPosts: boolean;
+  showNews: boolean;
   showPhoto: boolean;
   showVideo: boolean;
   showPages: boolean;
   showProfiles: boolean;
   showComps: boolean;
-  showNews: boolean;
   showBCC: boolean,
   showPANDL: boolean;
 };
@@ -25,6 +25,7 @@ export class SearchpageComponent {
 
   // new code 
 
+    // تهيئة الحالة الافتراضية
   displayState: DisplayState = {
     showAll: true,
     showRecent: true,

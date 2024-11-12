@@ -1,107 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <!-- sidebar.component.html -->
-    <aside class="sidebar">
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tiemline</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Messages</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Messages</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" (click)="goToMainMenu()">
-                    <img src="assets/icons/menu.svg" width="40" height="40"/>
-                    <span>Main Menu</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" (click)="goToAlerts()">
-                    <img src="assets/icons/notifications.svg" width="40" height="40"/>
-                    <span>Alerts</span>
-                </a>
-            </li>
-        </ul>
-    </aside>
-</body>
-</html>
 
-
-
-
-
-
-
-<!------
-<div class="sidebar" id="sidebar" style="margin-top: 20px;">
-    <div class="chip fs-5 w-100" id="nav">
-        <a class="navbar-brand">
-            <img src="assets/img/HD wallpaper_ girl wearing VR goggle, woman using VR glasses, virtual reality.jpeg" alt="" width="40" height="40"/>
-            <span>ruba nasser</span>
-        </a>
-    </div>
+<aside class="sidebar">
+  <ul class="nav">
+    <nav class="navbar m-2">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary" href="#">Feed Cloud</a>
+      </div>
+    </nav>
     <hr>
-    <div class="container">
-        <div class="row text-dark" id="reem">
-            <a (click)="goToHome()">
-                <img src="assets/icons/home.svg"/>
-                <span>home</span>
-            </a>
-            <a (click)="goToMainMenu()">
-                <img src="assets/icons/menu.svg" width="40" height="40"/>
-                <span>Main Menu</span>
-            </a>
-            <a (click)="goToAlerts()">
-                <img src="assets/icons/notifications.svg" width="40" height="40"/>
-                <span>Alerts</span>
-            </a>
-            <a (click)="goToInterests()">
-                <img src="assets/icons/beenhere_FILL0_wght400_GRAD0_opsz48.svg" width="40" height="40"/>
-                <span>Interests</span>
-            </a>
-            <a (click)="goToFriendships()">
-                <img src="assets/icons/friend.svg" width="40" height="40">
-                <span>Friends</span>
-            </a>
-            <a (click)="goToMessages()">
-                <img src="assets/icons/message.svg" width="40" height="40"/>
-                <span>Messages</span>
-            </a>
-            <a>
-                <img src="assets/icons/settings.svg" width="40" height="40"/>
-                <span>Settings</span>
-            </a>
-            <button (click)="toggleMode()">
-                <mat-icon>{{ isDarkMode ? 'brightness_7': 'brightness_4' }}</mat-icon>
-            </button>
-            <hr>
-            <a (click)="goToWinwatch()">
-                <img src="assets/icons/smart_display.svg" width="50" height="50"/>
-                <span>Watch</span>
-            </a>
-            <a>
-                <img src="assets/icons/smart_display.svg" width="50" height="50"/>
-                <span>Podcast</span>
-            </a>
-            <a>
-                <img src="assets/icons/smart_display.svg" width="50" height="50"/>
-                <span>Career</span>
-            </a>
-        </div>
-    </div>
+    <button type="button" class="btn btn-outline-secondary m-2 d-grid gap-2 col-6 mx-auto" (click)="openModal()">Create</button>
+    <hr>
+    <li class="nav-item" [routerLink]="['/feed']" routerLinkActive="active">
+      <a href="" class="nav-link">Feed</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/follow']" routerLinkActive="active">
+      <a href="" class="nav-link">Follow</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/news']" routerLinkActive="active">
+      <a href="" class="nav-link">News</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/stories']" routerLinkActive="active">
+      <a href="" class="nav-link">Stories</a>
+    </li>
+    <hr>
+    <li class="nav-item" [routerLink]="['/search']" routerLinkActive="active">
+      <a href="" class="nav-link">Search</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/notify']" routerLinkActive="active">
+      <a href="" class="nav-link">Notifications</a>
+    </li>
+    <hr>
+    <li class="nav-item" [routerLink]="['/board']" routerLinkActive="active">
+      <a href="" class="nav-link">Dashboard</a>
+    </li>
+    <li class="nav-item" [routerLink]="['/panel']" routerLinkActive="active">
+      <a href="" class="nav-link">Panel</a>
+    </li>
+  </ul>
+</aside>
+
+
+
+<!-- Modal Structure -->
+<div class="modal" [ngClass]="{'show': isModalOpen}">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <p>Create your own content..</p>
+    <p class="d-flex justify-content-center d-inline-flex gap-3">
+      <button type="button" class="btn" data-bs-toggle="button" [routerLink]="['/panel']" routerLinkActive="active">Create Story</button>
+      <button type="button" class="btn" data-bs-toggle="button" [routerLink]="['/panel']" routerLinkActive="active">Create Short</button>
+      <button type="button" class="btn" data-bs-toggle="button" [routerLink]="['/panel']" routerLinkActive="active">Create Read</button>
+    </p>
+  </div>
 </div>
------->

@@ -10,19 +10,23 @@
 // public form 
 - input name,
 - input additional name, 
+- input type ( data in databace ),
+- input headline, 
 - input locations, 
 
 // company form 
 - input company name 
 - input additional name for company 
+- input type 
 - input headline 
-- input employees ( select - options ) ( data in databace ) 
+- input employees ( select - options ) ( data in databace ), 
 - input website url 
 - input main_image
 
 // news form 
 - input name 
 - input additional name
+- input type ( data in databace ),
 - input headline
 - input website url 
 - input main_image
@@ -30,16 +34,19 @@
 // bcc form 
 - input name 
 - input additional name
+- input type ( data in databace ),
 - input headline
 - input locations 
 - input main_image
 
 // pandl form 
-- input name places and locations 
-- input Additional name for places and locations 
-- input headline places and locations 
+- input name place and location 
+- input Additional name for place and location
+- input type place and location ( data in databace ),
+- input headline place and location
 - input working hours ( input type time ) 
-- input maps link ( google maps )
+- input address ( from google maps ) place and location 
+- input map link ( from google maps ) place and location 
 - input main_image
 
 

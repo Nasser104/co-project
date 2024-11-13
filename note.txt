@@ -1,1 +1,89 @@
 
+---> main-form 
+
+// private form 
+
+// public form 
+
+// company form 
+
+// news form 
+
+// bcc form 
+
+// pandl form 
+
+- input : name places and locations 
+- input : Additional name for places and locations 
+- 
+- 
+- 
+
+
+----- 
+
+
+---> main-dashboard 
+
+// private dashboard 
+
+- admin page 
+- Friends 
+- Follows 
+- Corporate 
+
+// public dashboard 
+
+- admin page 
+- Followers
+- Followings 
+- Corporate 
+
+// corporate dashboard 
+
+- admin page 
+- Friends 
+- Follows 
+- Corporate 
+
+// news dashboard 
+
+- admin page 
+- Friends 
+- Follows 
+- Corporate 
+
+// bcc dashboard 
+
+- admin page 
+- Friends 
+- Follows 
+- Corporate 
+
+// pandl dashboard 
+
+- admin page 
+- Friends 
+- Follows 
+- Corporate 
+
+
+----- 
+
+
+---> main-admin
+
+// private admin
+
+// public admin 
+
+// corporate admin 
+
+// news admin 
+
+// bcc admin 
+
+// pandl admin
+
+
+

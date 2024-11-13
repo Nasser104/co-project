@@ -2,22 +2,45 @@
 ---> main-form 
 
 // private form 
+- input name,
+- input additional name, 
+- input locations, 
+- input gender ['Male', 'Female', 'Not to Say'], 
 
 // public form 
+- input name,
+- input additional name, 
+- input locations, 
 
 // company form 
+- input company name 
+- input additional name for company 
+- input headline 
+- input employees ( select - options ) ( data in databace ) 
+- input website url 
+- input main_image
 
 // news form 
+- input name 
+- input additional name
+- input headline
+- input website url 
+- input main_image
 
 // bcc form 
+- input name 
+- input additional name
+- input headline
+- input locations 
+- input main_image
 
 // pandl form 
-
-- input : name places and locations 
-- input : Additional name for places and locations 
-- 
-- 
-- 
+- input name places and locations 
+- input Additional name for places and locations 
+- input headline places and locations 
+- input working hours ( input type time ) 
+- input maps link ( google maps )
+- input main_image
 
 
 ----- 
